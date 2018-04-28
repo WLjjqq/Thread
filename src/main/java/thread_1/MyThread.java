@@ -8,6 +8,9 @@ public class MyThread extends Thread{
     //重写run()方法
     public void run(){
         super.run();
+        System.out.println("Thread "+Thread.currentThread().getName()); //输出：Thread-0
+        System.out.println("MyThread "+MyThread.currentThread().getName());//输出:Thread-0
+        System.out.println("this "+this.currentThread().getName());//输出 ：Thread-0  说明这三个是同一个线程。
         System.out.println("MyThread");
     }
 

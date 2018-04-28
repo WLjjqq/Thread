@@ -9,17 +9,21 @@ package thread_1;
  * 4：start()方法是：通知“线程规划器”，这个线程已经准备好了。请安排时间去调用这个线程。调用这个线程的run()方法。
  *      不能直接thread.run()。这样相当于是调用了一个run()方法。不是调用线程。
  *      run()是线程的主体。
+ *  5：注意一下。继承的方式的话是没有创建线程的。下面的代码只有一个main线程。
  */
 public class MyThreadRunnable implements Runnable {
     @Override
+
     public void run() {
         System.out.println("实现Runnable的方式");
     }
     //使用
     public static void main(String[] args) {
+
         MyThreadRunnable myThreadRunnable =new MyThreadRunnable();
                 Thread thread=new Thread(myThreadRunnable);
                 thread.start();
+        System.out.println(thread.currentThread().getName());
         System.out.println("运行结束！！！");
     }
     /**

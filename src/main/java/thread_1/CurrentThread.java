@@ -8,7 +8,7 @@ package thread_1;
  *   2）：myThread.run();输出结果
  *          构造方法打印main
  *          run方法打印main
- *     说明构造器是被main线程调用。 run()方法是被Thread-0线程调用。
+ *     说明构造器是被main线程调用。 run()方法只是CurrentThread类的一个方法，是被Thread-0线程调用。
  */
 public class CurrentThread extends Thread{
     public CurrentThread(){
