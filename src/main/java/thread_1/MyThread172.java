@@ -18,7 +18,7 @@ public class MyThread172 extends Thread{
 
     public static void main(String[] args) {
 
-        /*try {
+        try {
             MyThread172 myThread172 = new MyThread172();
             myThread172.start();
             Thread.sleep(10000);
@@ -29,7 +29,7 @@ public class MyThread172 extends Thread{
             System.out.println("main catch");
             e.printStackTrace();
         }
-        System.out.println("end");*/
+        System.out.println("end");
         /**
          * i=500000
          * 是否停止1？= false
@@ -69,10 +69,10 @@ public class MyThread172 extends Thread{
          * i=63802
          */
 
-        MyThread172 myThread172=new MyThread172();
+        /*MyThread172 myThread172=new MyThread172();
         String name =myThread172.currentThread().getName();
         System.out.println("myThread172线程的名字： "+name);
-        System.out.println("Thread线程的名字："+Thread.currentThread().getName());
+        System.out.println("Thread线程的名字："+Thread.currentThread().getName());*/
         /**
          * 名字输出的一样。都是main 。但是Thread没有isInterrupted()方法。myThread172没有interrupted()方法。
          */
